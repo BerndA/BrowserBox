@@ -1,0 +1,42 @@
+################################################################################
+#                                                                              #
+#     Create BrowserBox images with Travis                                     #
+#                                                                              #
+#                                                                              #
+#      Copyright (C) 2020 Tom Stöveken                                         #
+#                                                                              #
+################################################################################
+
+language: generic
+
+# steps to do before the install
+before_install:
+  # 
+  - apt install -y virtualbox qemu
+
+# perform the installation
+install:
+  # 
+  - echo test
+
+# perform actual job
+script:
+  - echo $PWD
+  - echo $HOME
+  - ls $PWD
+  - cd $PWD
+
+# notify result (passed or failed)
+notifications:
+  email:
+    on_success: change
+    on_failure: change
+    
+# upload compiled firmware as asset
+#deploy:
+#  provider: releases
+#  api_key: $GITHUB_PERSONAL_ACCESS_TOKEN
+#  file: "BrowserBox.ova"
+#  skip_cleanup: true
+#  on:
+#    tags: true
