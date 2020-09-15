@@ -12,7 +12,7 @@ language: generic
 # steps to do before the install
 before_install:
   # 
-  - apt install -y virtualbox qemu
+  - sudo apt install -y virtualbox qemu
 
 # perform the installation
 install:
