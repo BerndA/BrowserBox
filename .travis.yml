@@ -9,7 +9,7 @@
 
 language: generic
 os: linux
-dist:
+dist: bionic
 
 # steps to do before the install
 before_install:
